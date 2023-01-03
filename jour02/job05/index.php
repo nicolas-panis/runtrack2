@@ -12,10 +12,11 @@
             for ($j = 2; $j < $i; $j++){
                 if ($i % $j == 0){
                     $var = FALSE;
+                    break;
                 }
             }
             if ($var != FALSE && $i != 1){
-                echo $i;?><br /><?php
+                echo $i; ?><br /><?php
             }
             $var = TRUE;
         }
