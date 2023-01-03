@@ -14,7 +14,7 @@
     $myInteger = 64;
     $myInteger2 = 128;
 
-    $str = "test";
+    $str = "Test";
     $str2 = "Test2";
 
     $float = 49.1;
@@ -31,50 +31,55 @@
             </tr>
 
             <tr>
-                <td>Booléen</td>
+                <td>". gettype($myBool) ."</td>
                 <td>myBool</td>
                 <td>$myBool</td>
             </tr>
             <tr>
-                <td>Booléen</td>
+                <td>". gettype($myBool2) ."</td>
                 <td>myBool2</td>
                 <td>$myBool2</td>
             </tr>
 
             <tr>
-                <td>Entier</td>
+                <td>". gettype($myInteger) ."</td>
                 <td>myInteger</td>
                 <td>$myInteger</td>
             </tr>
             <tr>
-                <td>Entier</td>
+                <td>". gettype($myInteger2) ."</td>
                 <td>myInteger2</td>
                 <td>$myInteger2</td>
             </tr>
 
             <tr>
-                <td>Chaîne de caractères</td>
+                <td>". gettype($str) ."</td>
                 <td>str</td>
                 <td>$str</td>
             </tr>
             <tr>
-                <td>Chaîne de caractères</td>
+                <td>". gettype($str2) ."</td>
                 <td>str2</td>
                 <td>$str2</td>
             </tr>
 
             <tr>
-                <td>Nombre à virgule</td>
+                <td>". gettype($float) ."</td>
                 <td>float</td>
                 <td>$float</td>
             </tr>
             <tr>
-                <td>Nombre à virgule</td>
+                <td>". gettype($float2) ."</td>
                 <td>float2</td>
                 <td>$float2</td>
             </tr>
         </table>
-    "
-    ?>
 
+    ";
+
+    /*$array = get_defined_vars();
+    //var_dump($array["_FILES"]);
+    var_dump($array);
+    */
+    ?>
 </html>
