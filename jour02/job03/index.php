@@ -7,7 +7,7 @@
     </head>
 
     <?php
-        for($i = 0; $i <= 100; $i++){
+        /*for($i = 0; $i <= 100; $i++){
             if ($i >= 0 && $i <= 20){
                 ?> <i> <?php echo $i; ?> </i> <?php 
             }
@@ -23,6 +23,30 @@
                 echo $i;
             }
             ?> <br /> <?php
-        }
+        }*/
+
+        $cpt = 0;
+        do {
+            ?> <i> <?php echo $cpt; ?> </i> <?php 
+            $cpt++;
+            ?><br /><?php
+        } while($cpt <= 20);
+
+        do {
+            if ($cpt == 42){
+                echo "La Plateforme_";
+            }
+            else{
+                ?> <u> <?php echo $cpt; ?> </u> <?php
+            }
+            $cpt++;
+            ?> <br /> <?php
+        } while($cpt <= 50);
+
+        do {
+            echo $cpt;
+            $cpt++;
+            ?> <br /> <?php
+        } while($cpt <= 100);
     ?>
 </html>

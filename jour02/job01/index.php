@@ -7,7 +7,7 @@
     </head>
 
     <?php
-        for($i = 0; $i <= 1337; $i++){
+        /*for($i = 0; $i <= 1337; $i++){
             if ($i == 42){
                 ?> <b><u> <?php echo $i; ?> </u></b> 
             <?php
@@ -16,6 +16,19 @@
                 echo $i;
             }
             ?><br /><?php
+        }*/
+
+        $cpt = 0;
+        while($cpt <= 1337){
+            if ($cpt == 42){
+                ?> <b><u> <?php echo $cpt; ?> </u></b> 
+            <?php
+            }
+            else{
+                echo $cpt;
+            }
+            ?><br /><?php
+            $cpt++;
         }
     ?>
 </html>
