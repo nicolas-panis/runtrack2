@@ -9,14 +9,6 @@
     <?php
         $hauteur = 5;
 
-        /*for($cpt = 0; $cpt <= $hauteur; $cpt++){
-            for ($espace = 0; $espace < $hauteur -1; $espace++){
-                echo "_";
-            }
-            $hauteur--;
-           ?><br /><?php
-        }*/
-
         $cpt = 0;
         $space = 0;
         $cptboucle = 0;
@@ -41,8 +33,6 @@
                     $space--;
                 }
             }
-
-            
             echo "\\";
             $cptboucle++;
             $space = $cptboucle*2;
