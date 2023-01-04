@@ -8,26 +8,23 @@
 
     <?php
         $str = "Certaines choses changent, et d'autres ne changeront jamais.";
-        $str2 = $str;
+        $str2 = "";
 
-        $i = 0;
-        while (isset($str[$i])) $i++;
-         
-        //$i--;               //On enlève une valeur qui correspond à la fin de la boucle donc qu'il n'y a plus de valeur dans la chaîne
-        //$i = $j;
+        /*while (isset($str[$i])) $i++;
+        
 
-        /*while($i >= 0){
-            $str2[$j-1] = $str[$i];
-            $i--;
-            $j--;
+        for ($i = $i-1; $i >= 0; $i--){
+            $str2[$i - 1] = $str[$i];
         }*/
 
-        for ($i--; $i >=0; $i--){
-            $j = $i;
-            $str2[$j-1] = $str[$i];
-            $j--;
+        for ($i = 0; isset($str[$i]); $i++){
+            if (isset($str[$i+1]) == FALSE){
+                $str2[$i] = $str[0];
+            }
+            else{
+                $str2[$i] = $str[$i+1];
+            }
         }
-        
         echo $str2;
     ?>
 </html>
