@@ -11,17 +11,20 @@
         $str2 = "";
 
         $i = 0;
-        while(isset($str[$i])){
+        $j = 0;
+        /*while(isset($str[$i])){
             $i++;
         }
         $i--;           //On enlève une valeur qui correspond à la fin de la boucle donc qu'il n'y a plus de valeur dans la chaîne
-
-        $j = 0;
         while ($i >= 0){
             $str2[$j] = $str[$i];
             $j++;
             $i--;
         }
-        echo $str2;
+        echo $str2;*/
+
+        for ($i = -1; isset($str[$i]); $i--) {
+            echo $str[$i];
+        }
     ?>
 </html>
