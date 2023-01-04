@@ -27,6 +27,7 @@
             $str2[$j-1] = $str[$i];
             $j--;
         }
+        
         echo $str2;
     ?>
 </html>
