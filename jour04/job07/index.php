@@ -42,10 +42,6 @@
                 echo "/";
                 $largeur = $cptboucle;
                 if ($hauteur == 1){
-                    /*while ($space > 0){
-                        echo "_";
-                        $space--;
-                    }*/
                     for($i = 0; $i < $_GET['largeur'] - 2; $i++){
                         echo "_";
                     }
@@ -54,7 +50,6 @@
                     $largeur = $largeur * 2;
                     while($largeur != 0){
                         echo "_";                 //Si on ne veut pas utiliser la ligne du dessous
-                        //echo '&nbsp';
                         $largeur--;
                     }
                 }
