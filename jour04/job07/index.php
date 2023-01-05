@@ -12,6 +12,8 @@
         <input type = "submit" value = "Envoyer" /><br />
     </form>
 
+    <br />
+
     <?php
 
         $i = false;
@@ -35,7 +37,6 @@
             $cptboucle = 0;
             while($hauteur > 0){
                 while($cpt < $hauteur * 2 - 1){
-                    //echo "_";                     Si on ne veut pas utiliser la ligne du dessous
                     echo '&nbsp';
                     $cpt++;
                 }
@@ -49,7 +50,7 @@
                 else{
                     $largeur = $largeur * 2;
                     while($largeur != 0){
-                        echo "_";                 //Si on ne veut pas utiliser la ligne du dessous
+                        echo "_";
                         $largeur--;
                     }
                 }
