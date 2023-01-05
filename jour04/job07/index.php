@@ -46,7 +46,7 @@
                         echo "_";
                         $space--;
                     }*/
-                    for($i = 0; $i < $_GET['largeur']-1; $i++){
+                    for($i = 0; $i < $_GET['largeur'] - 2; $i++){
                         echo "_";
                     }
                 }
