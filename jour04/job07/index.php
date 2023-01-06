@@ -42,19 +42,12 @@
                 }
                 echo "/";
                 $largeur = $cptboucle;
-                if ($hauteur == 1){
-                    for($i = 0; $i < $_GET['largeur'] - 2; $i++){
-                        echo "_";
-                    }
+                $largeur = $largeur * 2;
+                while($largeur != 0){
+                    echo "_";
+                    $largeur--;
                 }
-                else{
-                    $largeur = $largeur * 2;
-                    while($largeur != 0){
-                        echo "_";
-                        $largeur--;
-                    }
-                }
-                echo "\\";
+                echo "\ ";
                 $cptboucle++;
                 
                 $hauteur--;
