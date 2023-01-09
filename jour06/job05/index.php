@@ -8,7 +8,7 @@
 
     <form action="index.php" method="get">
 
-        <select name="style" id="pet-select">
+        <select name="style">
         <option value="">--Choisir un style--</option>
         <option value="style1">Style1</option>
         <option value="style2">Style2</option>
