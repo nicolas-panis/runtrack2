@@ -19,14 +19,16 @@
     }
         
     if (isset($_SESSION["nbvisites"])){
-        echo $_SESSION["nbvisites"];
-        $_SESSION["nbvisites"]++;
-        
-    }
-
-    if (isset($_GET["reset"])){
-        unset($_SESSION["nbvisites"]);
-        session_destroy();
+        if (isset($_GET["reset"])){
+            $_SESSION["nbvisites"] = 0;
+            echo $_SESSION["nbvisites"];
+            unset($_SESSION["nbvisites"]);
+            session_destroy();
+        }
+        else{
+            echo $_SESSION["nbvisites"];
+            $_SESSION["nbvisites"]++;
+        }        
     }
 
     
