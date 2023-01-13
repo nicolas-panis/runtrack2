@@ -4,28 +4,30 @@
     
 
     if (isset($_GET['connexion'])){
-        if ($_COOKIE['prenoms'] == $_GET['prenom']){
-            echo "Bonjour " . $_GET['prenom'];
-            ?><form action='index.php' method= 'get'>
-                <button type = 'submit' value = 'Envoyer' name = 'deco'>Déconnexion</button>
-            </form><?php
-        }
+
+        setcookie('prenoms', $_GET['prenom'], time() + 3600);
+
+        if (isset($_COOKIE['prenoms'])){
+            if ($_COOKIE['prenoms'] == $_GET['prenom']){
+                echo "Bonjour " . $_GET['prenom'];
+                ?><form action='index.php' method= 'get'>
+                    <button type = 'submit' value = 'Envoyer' name = 'deco'>Déconnexion</button>
+                </form><?php
+            }
+            else{
+                ?><form action='index.php' method= 'get'>
+                    <input type = 'text' name = 'prenom'>
+                    <button type = 'submit' value = 'Envoyer' name = 'connexion'>Connexion</button>
+                </form><?php
+            }
+            
+        } 
         else{
             ?><form action='index.php' method= 'get'>
                 <input type = 'text' name = 'prenom'>
                 <button type = 'submit' value = 'Envoyer' name = 'connexion'>Connexion</button>
             </form><?php
         }
-
-        setcookie('prenoms', $_GET['prenom'], time() + 3600);
-
-        /*if (isset($_COOKIE['prenoms'])){
-            /*foreach($_COOKIE['prenoms'] as $value){
-            echo $value;
-            ?> <br /> <?php
-            }
-        }*/
-        
     }
 
     else{
